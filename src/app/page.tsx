@@ -5,7 +5,6 @@ import { Stats } from "@/components/sections/stats";
 import { Schedule } from "@/components/sections/schedule";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Sponsors } from "@/components/sections/sponsors";
-import { Tickets } from "@/components/sections/tickets";
 import { Venue } from "@/components/sections/venue";
 import { MapSection } from "@/components/sections/map-section";
 import { Contact } from "@/components/sections/contact";
@@ -25,7 +24,6 @@ export default function Home() {
         <Schedule />
         <Testimonials />
         <Sponsors />
-        <Tickets />
         <Venue />
         <MapSection />
         <Contact />
