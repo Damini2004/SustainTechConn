@@ -1,3 +1,4 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { callForPapers } from "@/lib/data";
@@ -28,7 +29,7 @@ export function CallForPapers() {
               </div>
             </CardHeader>
             <CardContent className="flex-grow">
-                <Accordion type="multiple" collapsible className="w-full" defaultValue={["item-1", "item-2"]}>
+                <Accordion type="multiple" className="w-full" defaultValue={["item-1", "item-2"]}>
                     <AccordionItem value="item-1">
                         <AccordionTrigger className="text-base font-semibold">
                             AI, Data, and Intelligent Systems
