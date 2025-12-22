@@ -12,6 +12,7 @@ import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
+import { Tickets } from "@/components/sections/tickets";
 
 export default function Home() {
   return (

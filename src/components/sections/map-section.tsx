@@ -1,36 +1,17 @@
-"use client";
-
-import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
 
 export function MapSection() {
-    const position = { lat: 28.4140, lng: -81.4651 };
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-
-    if (!apiKey) {
-        return (
-            <section id="map-section" className="h-[400px] bg-muted flex items-center justify-center text-center p-4">
-                <div>
-                    <h3 className="font-headline text-xl font-bold">Map Unavailable</h3>
-                    <p className="text-muted-foreground">Please provide a Google Maps API key in your .env.local file to display the map.</p>
-                </div>
-            </section>
-        )
-    }
-
     return (
-        <section id="map-section" aria-label="map-container" className="h-[400px] md:h-[500px]">
-            <APIProvider apiKey={apiKey}>
-                <Map
-                    center={position}
-                    zoom={14}
-                    mapId="eventbiz_map"
-                    disableDefaultUI={true}
-                    gestureHandling={'greedy'}
-                    className='h-full w-full'
-                >
-                    <Marker position={position} />
-                </Map>
-            </APIProvider>
+        <section id="map" aria-label="map-container" className="h-[400px] md:h-[500px]">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.971960256801!2d-81.46767498888496!3d28.41400497568581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77e35b342467d%3A0x1d31d4285d15c753!2sOrange%20County%20Convention%20Center!5e0!3m2!1sen!2sus!4v1719590059531!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Event Location Map"
+            ></iframe>
         </section>
     );
 }

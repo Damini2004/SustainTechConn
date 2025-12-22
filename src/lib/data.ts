@@ -8,6 +8,7 @@ export const navLinks = [
   { href: '#schedules', label: 'Schedules' },
   { href: '#sponsors', label: 'Sponsors' },
   { href: '#info', label: 'Info' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 export const heroData = {
@@ -184,3 +185,4 @@ export const socialLinks = [
     { name: 'Rss', icon: 'Rss' as const, href: '#' },
     { name: 'Dribbble', icon: 'Dribbble' as const, href: '#' },
 ];
+
