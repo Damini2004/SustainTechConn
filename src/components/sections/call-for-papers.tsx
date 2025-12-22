@@ -18,7 +18,7 @@ export function CallForPapers() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           {/* Conference Themes */}
-          <Card className="lg:col-span-3 shadow-lg">
+          <Card className="lg:col-span-3 shadow-lg flex flex-col">
             <CardHeader>
               <div className="flex items-center gap-4">
                 <div className="bg-primary/10 p-3 rounded-lg">
@@ -27,8 +27,8 @@ export function CallForPapers() {
                 <CardTitle className="font-headline text-2xl">Conference Themes</CardTitle>
               </div>
             </CardHeader>
-            <CardContent>
-                <Accordion type="single" collapsible className="w-full">
+            <CardContent className="flex-grow">
+                <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
                     <AccordionItem value="item-1">
                         <AccordionTrigger className="text-base font-semibold">
                             AI, Data, and Intelligent Systems
