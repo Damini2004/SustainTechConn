@@ -12,6 +12,7 @@ import { Tickets } from "@/components/sections/tickets";
 import { Preamble } from "@/components/sections/preamble";
 import { Objectives } from "@/components/sections/objectives";
 import { CallForPapers } from "@/components/sections/call-for-papers";
+import { Committee } from "@/components/sections/committee";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
           <Schedule />
           <Tickets />
           <Speakers />
+          <Committee />
           <Testimonials />
           <Contact />
         </div>

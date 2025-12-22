@@ -10,6 +10,7 @@ export const navLinks = [
   { href: '#schedules', label: 'Important Dates' },
   { href: '#tickets', label: 'Registration' },
   { href: '#speakers', label: 'Speakers' },
+  { href: '#committee', label: 'Committee' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -162,3 +163,67 @@ export const socialLinks = [
     { name: 'Rss', icon: 'Rss' as const, href: '#' },
     { name: 'Dribbble', icon: 'Dribbble' as const, href: '#' },
 ];
+
+export const committeeData = {
+    chiefPatrons: {
+        title: 'Chief Patron',
+        members: [
+            { name: 'Shri. Nandkumar M. Katkar', role: 'President, VPP' },
+            { name: 'Shri. Ravindra Ghorpade', role: 'Vice- President, VPP' },
+            { name: 'Adv. Shri Appasaheb Desai', role: 'General Secretary, VPP' }
+        ]
+    },
+    patrons: {
+        title: 'Patrons',
+        members: [
+            { name: 'Adv. Shri. Amit A. Desai', role: 'Treasurer VPP' },
+            { name: 'Mr. Suresh G. Desai', role: 'Trustee, VPP' },
+            { name: 'Mr. shivraj D. Shinde', role: 'Industrialist' },
+            { name: 'Mrs. Urmila A. Desai', role: 'Trustee, VPP' },
+            { name: 'Mr. Anandrao K. Shinde', role: 'Trustee, VPP' },
+            { name: 'Mr. Prakash B. Chavan', role: 'Trustee, VPP' },
+            { name: 'Dr. Ashok Chavan', role: 'Campus Director, VPP' }
+        ]
+    },
+    generalChief: {
+        title: 'General Chief',
+        members: [
+            { name: 'Dr. Alam N. Shaikh', role: 'Principal, VPPCOE & VA' }
+        ]
+    },
+    convener: {
+        title: 'Convener',
+        members: [
+            { name: 'Dr. Pravin Yadav', role: 'Vice Principal, VPPCOE & VA' }
+        ]
+    },
+    coConvener: {
+        title: 'Co- Convener',
+        members: [
+            { name: 'Dr. Rais A. Mulla', role: 'HoD, Computer Engineering' }
+        ]
+    },
+    advisoryCommittee: {
+        title: 'Advisory Committee member',
+        members: [
+            { name: 'Dr. Chandra Prakash', role: 'SVNIT Surat' },
+            { name: 'Dr. Alok Kumar', role: 'SVNIT Surat' },
+            { name: 'Dr. Anirban Bhattacharjee', role: 'SVNIT Surat' },
+            { name: 'Dr. Vilas Nandivekar', role: 'Registrar, SNDT University, Mumbai' },
+            { name: 'Dr. Vilas Karjini', role: 'Professor, Warana University, Kolhapur' },
+            { name: 'Dr. P.K. Desai', role: 'President ISTE, New Delhi' },
+            { name: 'Dr. Uddav Bhosale', role: 'Vice Chancellor, S, G. University Kolhapur' },
+            { name: 'Dr. A.K. Gupta', role: 'Vice Chancellor, D.Y. Patil University, Talsande, Kolhapur' },
+            { name: 'Mr. Ravishankar Desai', role: 'Ex.Vice Chancellor & Head IM Reliance Industries Ltd.' },
+            { name: 'Dr. Jayendra Kumar', role: 'Professor, Grade- 1, VIT- AP University' }
+        ]
+    },
+    correspondenceContact: {
+        title: 'Correspondence Contact',
+        members: [
+            { name: 'Dr. Rais A. Mulla', role: '(8485863406)' },
+            { name: 'Dr. Mahendra E. Pawar', role: '(9890838047)' },
+            { name: 'Dr. Gaytri Bachhav', role: '(8087294699)' }
+        ]
+    }
+};
