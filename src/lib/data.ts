@@ -62,6 +62,12 @@ export const speakers = [
     bio: 'Interested in all the digital things. Has earned several awards and has been a speaker at many world-class seminars.',
     image: getImage('speaker-john'),
   },
+  {
+    name: 'Emily Carter',
+    title: 'Digital Strategist',
+    bio: 'An expert in digital marketing and online presence, Emily helps brands connect with their audiences in meaningful ways.',
+    image: getImage('speaker-emily'),
+  },
 ];
 
 export const stats = [
@@ -185,4 +191,3 @@ export const socialLinks = [
     { name: 'Rss', icon: 'Rss' as const, href: '#' },
     { name: 'Dribbble', icon: 'Dribbble' as const, href: '#' },
 ];
-

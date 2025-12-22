@@ -55,6 +55,12 @@
       "imageHint": "professional man"
     },
     {
+      "id": "speaker-emily",
+      "description": "Headshot of Emily Carter.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGhlYWRzaG90fGVufDB8fHx8MTc2NjQxNzEyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman headshot"
+    },
+    {
       "id": "stats-background",
       "description": "Background image for the statistics section, showing an abstract pattern.",
       "imageUrl": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMHRlY2h8ZW58MHx8fHwxNzY2MzkxODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
