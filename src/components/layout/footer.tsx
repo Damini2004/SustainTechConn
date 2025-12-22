@@ -9,17 +9,17 @@ const Icon = ({ name, ...props }: { name: keyof typeof Icons } & React.Component
 
 export function Footer() {
   return (
-    <footer className="bg-card text-card-foreground">
+    <footer className="bg-black text-white">
       <div className="container py-12 text-center">
         <div className="flex justify-center gap-6 mb-6">
           {socialLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+            <Link key={link.name} href={link.href} className="text-white hover:text-primary transition-colors">
               <Icon name={link.icon} className="h-6 w-6" />
               <span className="sr-only">{link.name}</span>
             </Link>
           ))}
         </div>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-white/80">
           © Copyright {new Date().getFullYear()} - Event Planner Pro by Firebase Studio
         </p>
       </div>
