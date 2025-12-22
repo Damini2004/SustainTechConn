@@ -14,7 +14,7 @@ export function Hero() {
           {heroData.images.map((img, index) => (
             <CarouselItem key={index} className="h-full">
               <Image
-                src={img.imageUrl}
+                src="/2.jpg"
                 alt="banner"
                 fill
                 className="object-cover"
