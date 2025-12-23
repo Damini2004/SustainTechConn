@@ -10,8 +10,8 @@ import { navLinks } from '@/lib/data';
 import { cn } from '@/lib/utils';
 
 const Logo = ({ scrolled }: { scrolled: boolean }) => (
-  <Link href="/" className="flex items-center gap-2">
-    <Image src="/logo-light.png" alt="SustainTechCon Logo" width={32} height={32} className={cn("h-8 w-auto", !scrolled && "invert")}/>
+    <Link href="/" className="flex items-center gap-2">
+    <Image src="/logo-light.png" alt="SustainTechCon Logo" width={32} height={32} className={`h-8 w-auto ${!scrolled ? 'invert' : ''}`}/>
     <span className={cn(
       "text-xl font-bold font-headline",
       scrolled ? "text-foreground" : "text-white"
