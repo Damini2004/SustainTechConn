@@ -2,7 +2,6 @@ import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/sections/hero";
 import { Speakers } from "@/components/sections/speakers";
 import { Schedule } from "@/components/sections/schedule";
-import { Testimonials } from "@/components/sections/testimonials";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -30,7 +29,6 @@ export default function Home() {
           <Tickets />
           <Speakers />
           <Committee />
-          <Testimonials />
           <Contact />
         </div>
       </main>
