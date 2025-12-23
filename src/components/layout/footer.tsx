@@ -11,7 +11,7 @@ const Icon = ({ name, ...props }: { name: keyof typeof Icons } & React.Component
 export function Footer() {
   return (
     <footer className="bg-black text-white">
-      <div className="container py-12 text-center">
+      <div className="container py-2 text-center">
         <div className="flex justify-center mb-8">
             <Image src="/demo.png" alt="SustainTechCon Logo" width={120} height={120} />
         </div>
