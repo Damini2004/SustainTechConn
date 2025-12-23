@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { navLinks } from '@/lib/data';
 import { cn } from '@/lib/utils';
 
 const Logo = ({ scrolled }: { scrolled: boolean }) => (
     <Link href="/" className="flex items-center gap-2">
-    <Image src="/demo.jpeg" alt="SustainTechCon Logo" width={50} height={50} className="h-12 w-12 rounded-full"/>
+    <Image src="/demo.jpeg" alt="SustainTechCon Logo" width={50} height={50} className="h-14 w-14 rounded-full"/>
   </Link>
 );
 
@@ -77,6 +77,9 @@ export function Header() {
                     </Button>
                   </SheetTrigger>
                   <SheetContent side="right">
+                    <SheetHeader>
+                      <SheetTitle className="sr-only">Menu</SheetTitle>
+                    </SheetHeader>
                     <div className="flex flex-col gap-6 p-6">
                       <Logo scrolled={true} />
                       <nav className="flex flex-col gap-4">
