@@ -29,13 +29,37 @@ export const preamble = {
 }
 
 export const objectives = [
-    'To promote research and innovation in sustainable technologies and intelligent systems',
-    'To encourage interdisciplinary collaboration among engineering, technology, management, healthcare, agriculture, and environmental sciences',
-    'To provide a global platform for research scholars and professionals to present high-quality research',
-    'To bridge the gap between academia, industry, and society',
-    'To highlight the role of AI, IoT, cyber-physical systems, and digital twins in sustainable development',
-    'To support young researchers and students through mentorship and exposure to global research trends',
-];
+    {
+      icon: 'Rocket' as const,
+      title: 'Promote Innovation',
+      description: 'To promote research and innovation in sustainable technologies and intelligent systems.',
+    },
+    {
+      icon: 'Users' as const,
+      title: 'Foster Collaboration',
+      description: 'To encourage interdisciplinary collaboration among engineering, technology, management, healthcare, agriculture, and environmental sciences.',
+    },
+    {
+      icon: 'Globe' as const,
+      title: 'Global Platform',
+      description: 'To provide a global platform for research scholars and professionals to present high-quality research.',
+    },
+    {
+      icon: 'Bridge' as const,
+      title: 'Bridge Gaps',
+      description: 'To bridge the gap between academia, industry, and society.',
+    },
+    {
+      icon: 'Cpu' as const,
+      title: 'Highlight Technology',
+      description: 'To highlight the role of AI, IoT, cyber-physical systems, and digital twins in sustainable development.',
+    },
+    {
+      icon: 'GraduationCap' as const,
+      title: 'Support Researchers',
+      description: 'To support young researchers and students through mentorship and exposure to global research trends.',
+    },
+  ];
 
 export const callForPapers = {
     description: "Authors are invited to submit original, unpublished, and high-quality research papers that are not under review elsewhere. Papers should present novel research contributions, experimental studies, theoretical analysis, or practical applications related to the conference themes.",
