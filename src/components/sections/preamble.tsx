@@ -1,20 +1,22 @@
-
 import { preamble } from "@/lib/data";
 
 export function Preamble() {
   return (
-    <section id="preamble" className="py-20 md:py-28">
-      <div className="container mx-auto px-32 md:px-16">
-        <div className="bg-muted/30 border border-border rounded-lg py-8 md:py-16 shadow-lg">
-          <div className="text-center mb-8">
-            <h2 className="font-headline text-4xl md:text-5xl font-bold">
-              {preamble.title}
-            </h2>
-            <div className="w-24 h-1 bg-primary mx-auto mt-4"></div>
-          </div>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-justify">
+    <section id="preamble" className="py-20 md:py-28 bg-gradient-to-br from-background via-muted/50 to-background">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="relative flex justify-center items-center">
+          <div className="absolute w-full max-w-4xl h-full border-4 border-primary/20 rounded-full blur-2xl animate-pulse"></div>
+          <div className="relative bg-background/80 backdrop-blur-sm border-2 border-primary/30 rounded-full p-12 md:p-20 shadow-2xl max-w-4xl">
+            <div className="text-center mb-8">
+              <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">
+                {preamble.title}
+              </h2>
+              <div className="w-24 h-1 bg-primary/70 mx-auto mt-4 rounded-full"></div>
+            </div>
+            <p className="text-lg text-foreground/80 text-center leading-relaxed">
               {preamble.content}
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </section>
