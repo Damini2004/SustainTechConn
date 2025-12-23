@@ -53,25 +53,23 @@ export function Committee() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch mb-8">
             {/* Top-level leadership */}
             <CommitteeList title={committeeData.chiefPatrons.title} members={committeeData.chiefPatrons.members} />
             <CommitteeList title={committeeData.generalChief.title} members={committeeData.generalChief.members} />
             <CommitteeList title={committeeData.convener.title} members={committeeData.convener.members} />
+        </div>
 
-            {/* Patrons */}
-            <div className="lg:col-span-3">
-                <CommitteeList title={committeeData.patrons.title} members={committeeData.patrons.members} />
-            </div>
-
-            {/* Advisory Committee */}
-            <div className="lg:col-span-3">
-                <CommitteeList title={committeeData.advisoryCommittee.title} members={committeeData.advisoryCommittee.members} />
-            </div>
-            
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+             {/* Patrons & Advisory */}
+            <CommitteeList title={committeeData.patrons.title} members={committeeData.patrons.members} />
+            <CommitteeList title={committeeData.advisoryCommittee.title} members={committeeData.advisoryCommittee.members} />
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {/* Co-convener and Contacts */}
             <CommitteeList title={committeeData.coConvener.title} members={committeeData.coConvener.members} />
-            <div className="lg:col-span-2">
+            <div className="md:col-span-2">
                 <CommitteeList title={committeeData.correspondenceContact.title} members={committeeData.correspondenceContact.members} />
             </div>
         </div>
