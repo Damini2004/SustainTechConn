@@ -13,7 +13,7 @@ export function Footer() {
     <footer className="bg-black text-white">
       <div className="container py-2 text-center">
         <div className="flex justify-center mb-8">
-            <Image src="/demo.png" alt="SustainTechCon Logo" width={120} height={120} />
+            <Image src="/reframed logo.jpeg" alt="SustainTechCon Logo" width={120} height={120} />
         </div>
         <div className="flex justify-center gap-6 mb-6">
           {socialLinks.map((link) => (
