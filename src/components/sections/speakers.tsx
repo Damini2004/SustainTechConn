@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { speakers } from '@/lib/data';
@@ -16,8 +17,8 @@ export function Speakers() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {speakers.map((speaker) => (
-            <Card key={speaker.name} className="overflow-hidden group text-center">
+          {speakers.map((speaker, index) => (
+            <Card key={index} className="overflow-hidden group text-center">
               <CardContent className="p-0">
                 <div className="relative aspect-square">
                   <Image
