@@ -28,7 +28,7 @@ export const heroData = {
   title: 'SustainTechCon 2026',
   subtitle: '1st International Conference on Sustainable Technologies and Intelligent Systems',
   date: '6–7 March 2026',
-  location: 'Vasantdada Patil’s College of Engineering and Visual Arts, Sion, Mumbai, India',
+  location: 'Vasantadada Patil Pratishthan’s College of Engineering and Visual Arts',
   countdownTarget: '2026-03-06T09:00:00',
   images: [getImage('hero-1'), getImage('hero-2')],
 };
@@ -289,7 +289,7 @@ export const testimonials = [
 export const contactInfo = [
     { title: 'Email Us', icon: 'Mail' as const, value: 'sustaintechcon@vpceng.ac.in' },
     { title: 'Call Us', icon: 'Smartphone' as const, value: '+91-XXXXX-XXXXX' },
-    { title: 'Address', icon: 'Home' as const, value: 'Vasantdada Patil’s College of Engineering and Visual Arts,\nSion, Mumbai, Maharashtra, India' },
+    { title: 'Address', icon: 'Home' as const, value: 'Vasantadada Patil Pratishthan’s College of Engineering and Visual Arts' },
 ];
   
 export const socialLinks = [
