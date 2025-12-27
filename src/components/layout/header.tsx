@@ -91,7 +91,7 @@ export function Header() {
         <div className="hidden md:flex items-center gap-6">
           {/* Image (not logo) */}
           <Image
-            src="/header-image.png" // change path if needed
+            src="/scopus.png" // change path if needed
             alt="Header Visual"
             width={60}
             height={40}
