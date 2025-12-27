@@ -58,7 +58,7 @@ export function Tickets() {
                         At least one author must register for each accepted paper to ensure inclusion in the conference proceedings. Registration fee is non-refundable. For detailed guidelines, please <Link href="/registration-guidelines" className='underline hover:text-accent'>click here</Link>.
                     </p>
                 </div>
-                <div className="max-w-4xl mx-auto backdrop-blur-sm rounded-xl shadow-2xl overflow-hidden">
+                <div className="max-w-4xl mx-auto backdrop-blur-sm rounded-xl shadow-2xl overflow-hidden border border-white/20">
                    <Table>
                         <TableHeader>
                             <TableRow className="border-b-white/20 hover:bg-white/10">
