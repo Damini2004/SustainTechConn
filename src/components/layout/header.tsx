@@ -133,7 +133,7 @@ export function Header() {
                 {navLinks.map((link) =>
                   link.isDropdown ? (
                     <div key={link.label}>
-                      <p className="text-sm font-semibold text-black">
+                      <p className="font-semibold text-black">
                         {link.label}
                       </p>
                       <div className="ml-4 mt-2 flex flex-col gap-2">
