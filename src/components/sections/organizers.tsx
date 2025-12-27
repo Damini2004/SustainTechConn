@@ -14,9 +14,9 @@ export function Organizers() {
           </p>
         </div>
         <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
-            <Image src="/reframed_logo-preview.png" alt="SustainTechCon Logo" width={120} height={120} className="object-contain bg-white p-2 rounded-md" />
-            <Image src="/College.png" alt="College Logo" width={120} height={120} className="object-contain bg-white p-2 rounded-md" />
-            <Image src="/RClogo.webp" alt="Researcher Connect Logo" width={120} height={120} className="object-contain bg-white p-2 rounded-md" />
+            <Image src="/reframed_logo-preview.png" alt="SustainTechCon Logo" width={120} height={160} className="object-contain bg-white rounded-md" />
+            <Image src="/College.png" alt="College Logo" width={120} height={160} className="object-contain bg-white rounded-md" />
+            <Image src="/RClogo.webp" alt="Researcher Connect Logo" width={120} height={160} className="object-contain bg-white rounded-md" />
         </div>
       </div>
     </section>
