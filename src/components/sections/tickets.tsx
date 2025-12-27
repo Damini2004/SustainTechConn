@@ -75,15 +75,6 @@ export function Tickets() {
                             ))}
                         </TableBody>
                     </Table>
-                    <div className="p-6 text-center">
-                        <Button
-                            size="lg"
-                            className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                            onClick={() => handleGetTicket("General")}
-                        >
-                            Register Now
-                        </Button>
-                    </div>
                 </div>
             </div>
 
