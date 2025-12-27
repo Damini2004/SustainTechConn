@@ -49,39 +49,41 @@ export function Header() {
       scrolled ? "bg-white shadow-md" : "bg-white"
     )}>
        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Logo scrolled={scrolled} />
-        
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            link.isDropdown ? (
-                <DropdownMenu key={link.label}>
-                  <DropdownMenuTrigger className={cn(navLinkClasses(scrolled), "flex items-center gap-1 focus:outline-none")}>
+        <div className="flex items-center gap-8">
+          <Logo scrolled={scrolled} />
+          
+          <nav className="hidden md:flex items-center gap-6">
+            {navLinks.map((link) => (
+              link.isDropdown ? (
+                  <DropdownMenu key={link.label}>
+                    <DropdownMenuTrigger className={cn(navLinkClasses(scrolled), "flex items-center gap-1 focus:outline-none")}>
+                      {link.label}
+                      <ChevronDown className="h-4 w-4" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      {link.subLinks?.map(subLink => (
+                        <DropdownMenuItem key={subLink.href} asChild>
+                          <Link href={subLink.href}>{subLink.label}</Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <Link 
+                    key={link.href} 
+                    href={link.href!} 
+                    className={navLinkClasses(scrolled)}
+                  >
                     {link.label}
-                    <ChevronDown className="h-4 w-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    {link.subLinks?.map(subLink => (
-                      <DropdownMenuItem key={subLink.href} asChild>
-                        <Link href={subLink.href}>{subLink.label}</Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              ) : (
-                <Link 
-                  key={link.href} 
-                  href={link.href!} 
-                  className={navLinkClasses(scrolled)}
-                >
-                  {link.label}
-                </Link>
-              )
-          ))}
-        </nav>
+                  </Link>
+                )
+            ))}
+          </nav>
+        </div>
 
         <div className="flex items-center">
             
-            <div className="md:hidden ml-4">
+            <div className="md:hidden">
               {isClient && (
                 <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
                   <SheetTrigger asChild>
