@@ -4,17 +4,8 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-  } from "@/components/ui/table"
 import { tickets } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import {
     AlertDialog,
@@ -58,23 +49,13 @@ export function Tickets() {
                         At least one author must register for each accepted paper to ensure inclusion in the conference proceedings. Registration fee is non-refundable. For detailed guidelines, please <Link href="/registration-guidelines" className='underline hover:text-accent'>click here</Link>.
                     </p>
                 </div>
-                <div className="max-w-4xl mx-auto backdrop-blur-sm rounded-xl shadow-2xl overflow-hidden border border-white/20">
-                   <Table>
-                        <TableHeader>
-                            <TableRow className="border-b-white/20 hover:bg-white/10">
-                                <TableHead className="text-white font-bold text-lg">Category</TableHead>
-                                <TableHead className="text-right text-white font-bold text-lg">Cost (USD)</TableHead>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                            {tickets.map((ticket) => (
-                            <TableRow key={ticket.type} className="border-b-white/10 last:border-b-0 hover:bg-white/5">
-                                <TableCell className="font-semibold text-base text-white">{ticket.type}</TableCell>
-                                <TableCell className="text-right font-bold text-xl text-white">{ticket.cost}</TableCell>
-                            </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
+                <div className="max-w-4xl mx-auto space-y-4">
+                   {tickets.map((ticket) => (
+                       <div key={ticket.type} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg p-4 flex justify-between items-center transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                           <span className="font-headline text-lg md:text-xl font-semibold text-white">{ticket.type}</span>
+                           <span className="font-bold text-2xl md:text-3xl text-accent">{ticket.cost}</span>
+                       </div>
+                   ))}
                 </div>
             </div>
 
