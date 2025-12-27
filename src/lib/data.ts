@@ -19,7 +19,6 @@ export const navLinks = [
   { href: '/registration', label: 'Registration' },
   { href: '/speakers', label: 'Speakers' },
   { href: '/committee', label: 'Committee' },
-  { href: '/contact', label: 'Contact' },
 ];
 
 export const heroData = {
