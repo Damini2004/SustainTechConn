@@ -40,36 +40,8 @@ export default function VenuePage() {
               </h2>
 
               <p className="text-gray-700 mb-8 text-lg">
-                Sion–Trombay Road, Near Everard Nagar, Chunabhatti, Mumbai,
-                Maharashtra – 400022, India
+              Vasantdada Patil Education Complex, Vasantdada patil turf, Eastern Express Hwy, near Everard Nagar, Rahul Nagar, Chunabhatti, Sion, Mumbai, Maharashtra 400022
               </p>
-
-              {/* About */}
-              <section className="mb-10">
-                <h3 className="text-2xl font-semibold text-primary-600 mb-4">
-                  About the Venue
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  The conference will be hosted at Vasantdada Patil Pratishthan’s
-                  College of Engineering and Visual Arts, offering modern
-                  auditoriums, seminar halls, and state-of-the-art infrastructure
-                  suitable for national and international academic events.
-                </p>
-              </section>
-
-              {/* Facilities */}
-              <section className="mb-10">
-                <h3 className="text-2xl font-semibold text-primary-600 mb-4">
-                  Facilities
-                </h3>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700 list-disc list-inside text-lg">
-                  <li className="hover:text-primary-600 transition-colors duration-200">Fully air-conditioned auditorium</li>
-                  <li className="hover:text-primary-600 transition-colors duration-200">High-speed Wi-Fi campus</li>
-                  <li className="hover:text-primary-600 transition-colors duration-200">Advanced audio-visual systems</li>
-                  <li className="hover:text-primary-600 transition-colors duration-200">Spacious parking facilities</li>
-                  <li className="hover:text-primary-600 transition-colors duration-200">Wheelchair accessible infrastructure</li>
-                </ul>
-              </section>
             </div>
           </div>
 
