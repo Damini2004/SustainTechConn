@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -6,26 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, ChevronDown } from 'lucide-react';
-import { navLinks, socialLinks } from '@/lib/data';
+import { Menu } from 'lucide-react';
+import { navLinks } from '@/lib/data';
 import { cn } from '@/lib/utils';
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-import * as Icons from 'lucide-react';
-
-const Icon = ({ name, ...props }: { name: keyof typeof Icons } & React.ComponentProps<typeof Icons.Icon>) => {
-    const LucideIcon = Icons[name] as React.ComponentType<any>;
-    return <LucideIcon {...props} />;
-};
-
 
 const Logo = ({ scrolled }: { scrolled: boolean }) => (
     <Link href="/" className="flex items-center gap-2">
-    <Image src="/reframed logo.jpeg" alt="SustainTechCon Logo" width={160} height={48} className="h-12 w-40 "/>
+    <Image src="/reframed_logo-preview.png" alt="SustainTechCon Logo" width={160} height={48} className="h-12 w-40 "/>
   </Link>
 );
 
@@ -45,60 +31,35 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinkClasses = (scrolled: boolean) => cn(
-    "text-sm font-medium transition-colors",
-    "text-foreground hover:text-primary"
-  );
-
   return (
     <header className={cn(
       "fixed top-0 z-50 w-full transition-colors duration-300",
-      scrolled ? "bg-white shadow-md" : "bg-white"
+      scrolled ? "bg-white shadow-md" : "bg-transparent"
     )}>
        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-8">
-          <Logo scrolled={scrolled} />
-          
-          <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              link.isDropdown ? (
-                  <DropdownMenu key={link.label}>
-                    <DropdownMenuTrigger className={cn(navLinkClasses(scrolled), "flex items-center gap-1 focus:outline-none")}>
-                      {link.label}
-                      <ChevronDown className="h-4 w-4" />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent>
-                      {link.subLinks?.map(subLink => (
-                        <DropdownMenuItem key={subLink.href} asChild>
-                          <Link href={subLink.href}>{subLink.label}</Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                ) : (
-                  <Link 
-                    key={link.href} 
-                    href={link.href!} 
-                    className={navLinkClasses(scrolled)}
-                  >
-                    {link.label}
-                  </Link>
-                )
-            ))}
-          </nav>
-        </div>
+        <Logo scrolled={scrolled} />
+        
+        <nav className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <Link 
+              href="/" 
+              className={cn(
+                "text-sm font-medium transition-colors",
+                scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary-foreground/80"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
 
-        <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-4">
-              {socialLinks.map((link) => (
-                <Link key={link.name} href={link.href} className="text-foreground/60 hover:text-primary transition-colors">
-                  <Icon name={link.icon} className="h-5 w-5" />
-                  <span className="sr-only">{link.name}</span>
-                </Link>
-              ))}
+        <div className="flex items-center">
+            <div className="hidden md:block">
+                <Button asChild variant={scrolled ? 'default' : 'secondary'}>
+                    <Link href="#tickets">Register</Link>
+                </Button>
             </div>
-            
-            <div className="md:hidden">
+            <div className="md:hidden ml-4">
               {isClient && (
                 <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
                   <SheetTrigger asChild>
@@ -107,7 +68,7 @@ export function Header() {
                       size="icon" 
                       className={cn(
                         "hover:bg-white/10",
-                        scrolled ? "text-foreground hover:bg-black/10" : "text-foreground"
+                        scrolled ? "text-foreground hover:bg-black/10" : "text-white"
                       )}
                     >
                       <Menu className="h-6 w-6" />
@@ -122,35 +83,19 @@ export function Header() {
                       <Logo scrolled={true} />
                       <nav className="flex flex-col gap-4">
                         {navLinks.map((link) => (
-                          <div key={link.label}>
-                            {link.isDropdown ? (
-                              <div className="flex flex-col gap-2">
-                                <span className="text-lg font-medium text-foreground/80">{link.label}</span>
-                                <div className="flex flex-col gap-2 pl-4">
-                                  {link.subLinks?.map(subLink => (
-                                    <Link
-                                      key={subLink.href}
-                                      href={subLink.href}
-                                      onClick={() => setMobileMenuOpen(false)}
-                                      className="text-base font-normal text-foreground/70 hover:text-foreground transition-colors"
-                                    >
-                                      {subLink.label}
-                                    </Link>
-                                  ))}
-                                </div>
-                              </div>
-                            ) : (
-                              <Link
-                                href={link.href!}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="text-lg font-medium text-foreground/80 hover:text-foreground transition-colors"
-                              >
-                                {link.label}
-                              </Link>
-                            )}
-                          </div>
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-lg font-medium text-foreground/80 hover:text-foreground transition-colors"
+                          >
+                            {link.label}
+                          </Link>
                         ))}
                       </nav>
+                      <Button asChild className="mt-4">
+                          <Link href="#tickets" onClick={() => setMobileMenuOpen(false)}>Register</Link>
+                      </Button>
                     </div>
                   </SheetContent>
                 </Sheet>
