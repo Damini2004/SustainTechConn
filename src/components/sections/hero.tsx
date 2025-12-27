@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, MapPin } from "lucide-react";
@@ -55,7 +56,7 @@ export function Hero() {
 
           <div className="flex justify-center gap-4">
             <Button asChild size="lg">
-              <Link href="#tickets">Register Now</Link>
+              <Link href="/registration">Register Now</Link>
             </Button>
 
             <Button
@@ -64,7 +65,7 @@ export function Hero() {
               variant="outline"
               className="border-white bg-transparent text-white hover:bg-white hover:text-black"
             >
-              <Link href="#papers">Submit Paper</Link>
+              <Link href="/call-for-papers">Submit Paper</Link>
             </Button>
           </div>
         </div>

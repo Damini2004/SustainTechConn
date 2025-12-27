@@ -1,17 +1,12 @@
+
 import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/sections/hero";
-import { Speakers } from "@/components/sections/speakers";
-import { Schedule } from "@/components/sections/schedule";
-import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
-import { Tickets } from "@/components/sections/tickets";
 import { Preamble } from "@/components/sections/preamble";
 import { Objectives } from "@/components/sections/objectives";
-import { CallForPapers } from "@/components/sections/call-for-papers";
-import { Committee } from "@/components/sections/committee";
 import { AboutCollege } from "@/components/sections/about-college";
 
 export default function Home() {
@@ -24,12 +19,6 @@ export default function Home() {
           <Preamble />
           <AboutCollege />
           <Objectives />
-          <CallForPapers />
-          <Schedule />
-          <Tickets />
-          <Speakers />
-          <Committee />
-          <Contact />
         </div>
       </main>
       <Footer />

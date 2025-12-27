@@ -14,12 +14,12 @@ export const navLinks = [
       { href: '/about/college', label: 'About College' },
     ]
   },
-  { href: '#papers', label: 'Call for Papers' },
-  { href: '#schedules', label: 'Important Dates' },
-  { href: '#tickets', label: 'Registration' },
-  { href: '#speakers', label: 'Speakers' },
-  { href: '#committee', label: 'Committee' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/call-for-papers', label: 'Call for Papers' },
+  { href: '/important-dates', label: 'Important Dates' },
+  { href: '/registration', label: 'Registration' },
+  { href: '/speakers', label: 'Speakers' },
+  { href: '/committee', label: 'Committee' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export const heroData = {
