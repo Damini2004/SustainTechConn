@@ -53,11 +53,11 @@ export function Footer() {
             </div>
             
             {/* Column 2: Navigation Links */}
-            <div className="space-y-4 flex flex-col items-center md:items-center">
+            <div className="space-y-4 flex flex-col items-center pt-4">
                  <h2 className="font-headline text-2xl font-bold">
                     Quick <span className="text-accent">Links</span>
                 </h2>
-                <nav className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-left">
+                <nav className="grid grid-cols-2 gap-x-8 gap-y-1.5">
                     {navLinks.map((link) => (
                         link.isDropdown ? (
                             link.subLinks?.map(subLink => (
