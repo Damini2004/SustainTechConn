@@ -7,10 +7,10 @@ export function Organizers() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="font-headline text-4xl md:text-5xl font-bold">
-            <span className="text-primary">Our</span> Organizers
+            <span className="text-primary">Our</span> Organizers & Collaborators
           </h2>
           <p className="text-lg text-muted-foreground mt-3 max-w-3xl mx-auto">
-            Proudly organized by the following institutions.
+            Proudly organized and supported by the following institutions.
           </p>
         </div>
         <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
