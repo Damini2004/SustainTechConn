@@ -27,18 +27,6 @@ export function Schedule() {
         </div>
 
         <div className="flex flex-col items-center gap-12">
-            {calendarImage && (
-                <div className="w-full max-w-4xl">
-                    <Image
-                        src={calendarImage.imageUrl}
-                        alt="Calendar with marked dates"
-                        width={600}
-                        height={400}
-                        className="rounded-lg shadow-2xl object-cover w-full aspect-[3/2]"
-                        data-ai-hint="calendar dates"
-                    />
-                </div>
-            )}
             <div className="w-full max-w-4xl backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border">
                 <Table>
                     <TableHeader>
