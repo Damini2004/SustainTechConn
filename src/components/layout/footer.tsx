@@ -52,7 +52,7 @@ export function Footer() {
 
             {/* Column 2: Contact Info */}
             <div className="space-y-4">
-                <h2 className="font-headline text-2xl font-bold">
+                <h2 className="font-headline text-2xl font-bold text-center">
                     Get in <span className="text-accent">Touch</span>
                 </h2>
                 <div className="space-y-3">
