@@ -16,6 +16,7 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
   } from "@/components/ui/alert-dialog"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table';
 
 export function Tickets() {
     const [dialogOpen, setDialogOpen] = useState(false);
@@ -49,13 +50,25 @@ export function Tickets() {
                         At least one author must register for each accepted paper to ensure inclusion in the conference proceedings. Registration fee is non-refundable. For detailed guidelines, please <Link href="/registration-guidelines" className='underline hover:text-accent'>click here</Link>.
                     </p>
                 </div>
-                <div className="max-w-4xl mx-auto space-y-4">
-                   {tickets.map((ticket) => (
-                       <div key={ticket.type} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg p-4 flex justify-between items-center transition-all duration-300 hover:bg-white/20 hover:scale-105">
-                           <span className="font-headline text-lg md:text-xl font-semibold text-white">{ticket.type}</span>
-                           <span className="font-bold text-2xl md:text-3xl text-accent">{ticket.cost}</span>
-                       </div>
-                   ))}
+                <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-lg shadow-lg overflow-hidden border border-white/20">
+                   <Table>
+                        <TableHeader>
+                            <TableRow className="border-b border-white/20">
+                                <TableHead className="text-white font-bold text-base md:text-lg">Registration Type</TableHead>
+                                <TableHead className="text-accent font-bold text-base md:text-lg">Early Bird</TableHead>
+                                <TableHead className="text-accent font-bold text-base md:text-lg">Late Bird</TableHead>
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                            {tickets.map((ticket) => (
+                                <TableRow key={ticket.type} className="border-0">
+                                    <TableCell className="font-headline text-base md:text-lg font-semibold text-white">{ticket.type}</TableCell>
+                                    <TableCell className="font-bold text-lg md:text-xl text-white">{ticket.earlyBird}</TableCell>
+                                    <TableCell className="font-bold text-lg md:text-xl text-white">{ticket.lateBird}</TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                   </Table>
                 </div>
             </div>
 
