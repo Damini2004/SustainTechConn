@@ -63,16 +63,18 @@ export function Header() {
                   <ChevronDown className="h-4 w-4" />
                 </button>
 
-                <div className="absolute left-0 mt-2 hidden min-w-[220px] rounded-md bg-white shadow-lg group-hover:block">
-                  {link.subLinks?.map((sub) => (
-                    <Link
-                      key={sub.href}
-                      href={sub.href}
-                      className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
-                    >
-                      {sub.label}
-                    </Link>
-                  ))}
+                <div className="absolute left-0 pt-2 hidden min-w-[220px] group-hover:block">
+                    <div className="rounded-md bg-white shadow-lg py-1">
+                        {link.subLinks?.map((sub) => (
+                            <Link
+                            key={sub.href}
+                            href={sub.href}
+                            className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                            >
+                            {sub.label}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
               </div>
             ) : (
