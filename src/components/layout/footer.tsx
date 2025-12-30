@@ -27,9 +27,9 @@ export function Footer() {
         <div className="absolute inset-0 bg-black/80" />
 
       <div className="container relative mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-12 gap-8 mb-8">
             {/* Column 1: Quick Links */}
-            <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <div className="col-span-12 md:col-span-4 flex flex-col items-center text-center md:items-start md:text-left">
                  <h2 className="font-headline text-2xl font-bold">
                     Quick <span className="text-accent">Links</span>
                 </h2>
@@ -51,7 +51,7 @@ export function Footer() {
             </div>
 
             {/* Column 2: Contact Info */}
-            <div className="flex flex-col items-center">
+            <div className="col-span-12 md:col-span-4 flex flex-col items-center">
                 <h2 className="font-headline text-2xl font-bold text-center">
                     Get in <span className="text-accent">Touch</span>
                 </h2>
@@ -75,7 +75,7 @@ export function Footer() {
             </div>
 
             {/* Column 3: Social Links */}
-            <div className="flex flex-col items-center">
+            <div className="col-span-12 md:col-span-4 flex flex-col items-center">
                  <h2 className="font-headline text-2xl font-bold">
                     Follow <span className="text-accent">Us</span>
                 </h2>
