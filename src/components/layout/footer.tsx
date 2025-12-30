@@ -48,7 +48,7 @@ export function Footer() {
               Quick <span className="text-accent">Links</span>
             </h2>
 
-            <nav className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1.5">
+            <nav className="grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-1.5">
               {navLinks.map((link) =>
                 link.isDropdown
                   ? link.subLinks?.map((subLink) => (
