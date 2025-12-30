@@ -9,6 +9,9 @@ const logos = [
     { src: "/Elsevier.png", alt: "Researcher Connect Logo" },
     { src: "/scopus.png", alt: "scopus.png" },
     { src: "/logo3.png", alt: "Researcher Connect Logo" },
+    { src: "/CLARIVATE.jpeg", alt: "CLARIVATE.jpeg" },
+    { src: "/Entomology.jpeg", alt: "Entomology.jpeg" },
+    { src: "/MRI INDIA.jpeg", alt: "MRI INDIA.jpeg" },
 
   ];
 
