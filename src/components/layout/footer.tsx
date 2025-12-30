@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { socialLinks, contactInfo, navLinks } from '@/lib/data';
 import * as Icons from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Icon = ({ name, ...props }: { name: keyof typeof Icons } & React.ComponentProps<typeof Icons.Icon>) => {
     const LucideIcon = Icons[name] as React.ComponentType<any>;
@@ -51,7 +51,7 @@ export function Footer() {
             </div>
 
             {/* Column 2: Contact Info */}
-            <div className="col-span-12 md:col-span-4 flex flex-col items-center">
+            <div className="col-span-12 md:col-span-4 flex flex-col">
                 <h2 className="font-headline text-2xl font-bold text-center">
                     Get in <span className="text-accent">Touch</span>
                 </h2>
