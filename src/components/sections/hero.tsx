@@ -16,7 +16,7 @@ export function Hero() {
       {/* Banner Image */}
       <div className="absolute inset-0">
         <Image
-          src="/2.jpg"
+          src="/Sustainable Development.png"
           alt="Hero Banner"
           fill
           priority
