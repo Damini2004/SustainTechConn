@@ -43,7 +43,7 @@ export function Footer() {
           {/* ===================== */}
           {/* Column 1: Quick Links */}
           {/* ===================== */}
-          <div className="col-span-12 md:col-span-4 flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="col-span-12 md:col-span-4 flex flex-col items-start text-left">
             <h2 className="font-headline text-2xl font-bold mb-3">
               Quick <span className="text-accent">Links</span>
             </h2>
@@ -76,12 +76,12 @@ export function Footer() {
           {/* ===================== */}
           {/* Column 2: Get in Touch */}
           {/* ===================== */}
-          <div className="col-span-12 md:col-span-4 flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="col-span-12 md:col-span-4 flex flex-col items-start text-left">
             <h2 className="font-headline text-2xl font-bold mb-3">
               Get in <span className="text-accent">Touch</span>
             </h2>
 
-            <div className="space-y-3 mt-2 w-full flex flex-col items-center md:items-start">
+            <div className="space-y-3 mt-2 w-full flex flex-col items-start">
               {contactInfo.map((info) => (
                 <Card
                   key={info.title}
