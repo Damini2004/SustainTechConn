@@ -58,13 +58,13 @@ export function Footer() {
                 <div className="space-y-3 mt-4 w-full">
                 {contactInfo.map((info) => (
                     <Card key={info.title} className="bg-card/20 backdrop-blur-sm text-card-foreground border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <CardHeader className="flex flex-row items-start gap-3 p-3">
+                        <CardHeader className="flex flex-row items-start gap-3 p-3 md:p-4">
                             <div className="flex items-center justify-center h-8 w-8 rounded-md bg-accent/20 shrink-0 mt-1">
                                 <Icon name={info.icon} className="h-4 w-4 text-accent" />
                             </div>
                             <div className="flex-1">
-                                <CardTitle className='font-headline text-base text-white'>{info.title}</CardTitle>
-                                <p className="text-white/80 text-xs whitespace-pre-line leading-relaxed">
+                                <CardTitle className='font-headline text-sm md:text-base text-white'>{info.title}</CardTitle>
+                                <p className="text-white/80 text-xs md:text-sm whitespace-pre-line leading-relaxed">
                                     {info.value}
                                 </p>
                             </div>
