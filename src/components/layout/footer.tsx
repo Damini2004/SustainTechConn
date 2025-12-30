@@ -99,7 +99,7 @@ export function Footer() {
                       <CardTitle className="font-headline text-sm md:text-base text-white">
                         {info.title}
                       </CardTitle>
-                      <p className="text-white/80 text-xs md:text-sm whitespace-pre-line leading-relaxed">
+                      <p className="text-white/80 text-[11px] md:text-sm whitespace-pre-line leading-relaxed">
                         {info.value}
                       </p>
                     </div>
