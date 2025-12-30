@@ -9,9 +9,9 @@ interface CountdownProps {
 }
 
 const CountdownItem = ({ value, label }: { value: number; label: TimeUnit }) => (
-  <div className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg p-4 w-24">
-    <span className="text-4xl font-bold font-headline tracking-tighter">{value}</span>
-    <span className="text-sm font-medium uppercase tracking-wider">{label}</span>
+  <div className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4 w-20 md:w-24">
+    <span className="text-3xl md:text-4xl font-bold font-headline tracking-tighter">{value}</span>
+    <span className="text-xs md:text-sm font-medium uppercase tracking-wider">{label}</span>
   </div>
 );
 

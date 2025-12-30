@@ -25,36 +25,36 @@ export function Hero() {
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
-        <div className="max-w-4xl space-y-6">
-          <h1 className="text-4xl font-bold md:text-6xl lg:text-7xl">
+        <div className="max-w-4xl space-y-4 md:space-y-6">
+          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
             {heroData.title}
           </h1>
 
-          <p className="text-lg text-slate-200 md:text-xl lg:text-2xl">
+          <p className="text-base text-slate-200 sm:text-lg md:text-xl lg:text-2xl">
             {heroData.subtitle}
           </p>
 
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-2 text-sm sm:text-base md:gap-4 sm:flex-row">
             <div className="flex items-center gap-2">
-              <CalendarDays className="h-5 w-5 text-primary" />
+              <CalendarDays className="h-4 w-4 text-primary" />
               <span>{heroData.date}</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-primary" />
+              <MapPin className="h-4 w-4 text-primary" />
               <span>{heroData.location}</span>
             </div>
           </div>
 
-          <div className="my-8">
+          <div className="py-4 md:py-8">
             <Countdown targetDate={heroData.countdownTarget} />
           </div>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg">
               <Link href="/registration">Register Now</Link>
             </Button>
