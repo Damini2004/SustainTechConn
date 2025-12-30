@@ -2,19 +2,28 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { socialLinks, contactInfo, navLinks } from '@/lib/data';
 import * as Icons from 'lucide-react';
+import type { LucideProps } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+
+/* ===================== */
+/* Dynamic Lucide Icon   */
+/* ===================== */
+type IconName = keyof typeof Icons;
 
 const Icon = ({
   name,
   ...props
 }: {
-  name: keyof typeof Icons;
-} & React.ComponentProps<typeof Icons.Icon>) => {
-  const LucideIcon = Icons[name] as React.ComponentType<any>;
+  name: IconName;
+} & LucideProps) => {
+  const LucideIcon = Icons[name] as React.FC<LucideProps>;
   return <LucideIcon {...props} />;
 };
 
+/* ===================== */
+/* Footer Component      */
+/* ===================== */
 export function Footer() {
   const bgImage = PlaceHolderImages.find(
     (img) => img.id === 'testimonials-background'
@@ -30,11 +39,10 @@ export function Footer() {
           fill
           className="object-cover"
           data-ai-hint={bgImage.imageHint}
-          priority={false}
         />
       )}
 
-      {/* Dark Overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/80" />
 
       {/* Content */}
@@ -61,14 +69,14 @@ export function Footer() {
                       </Link>
                     ))
                   : (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="text-sm text-white/80 hover:text-white hover:underline underline-offset-4 transition-colors whitespace-nowrap py-1"
-                    >
-                      {link.label}
-                    </Link>
-                  )
+                      <Link
+                        key={link.href}
+                        href="{link.href}"
+                        className="text-sm text-white/80 hover:text-white hover:underline underline-offset-4 transition-colors whitespace-nowrap py-1"
+                      >
+                        {link.label}
+                      </Link>
+                    )
               )}
             </nav>
           </div>
@@ -90,7 +98,7 @@ export function Footer() {
                   <CardHeader className="flex flex-row items-start gap-3 p-3 md:p-4">
                     <div className="flex items-center justify-center h-8 w-8 rounded-md bg-accent/20 shrink-0 mt-1">
                       <Icon
-                        name={info.icon}
+                        name={info.icon as IconName}
                         className="h-4 w-4 text-accent"
                       />
                     </div>
@@ -124,7 +132,10 @@ export function Footer() {
                   href={link.href}
                   className="text-white/80 hover:text-white transition-colors p-2 bg-white/10 rounded-md"
                 >
-                  <Icon name={link.icon} className="h-5 w-5" />
+                  <Icon
+                    name={link.icon as IconName}
+                    className="h-5 w-5"
+                  />
                   <span className="sr-only">{link.name}</span>
                 </Link>
               ))}
