@@ -13,7 +13,7 @@ export function Preamble() {
               </h2>
               <div className="w-24 h-1 bg-primary/70 mx-auto mt-4 rounded-full"></div>
             </div>
-            <p className="text-lg text-foreground/80 text-center leading-relaxed">
+            <p className="text-lg text-foreground/80 text-justify leading-relaxed">
               {preamble.content}
             </p>
           </div>
