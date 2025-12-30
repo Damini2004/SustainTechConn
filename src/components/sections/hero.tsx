@@ -34,7 +34,7 @@ export function Hero() {
             {heroData.title}
           </h1>
 
-          <p className="text-base text-slate-200 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="text-base text-slate-200 sm:text-lg md:text-xl">
             {heroData.subtitle}
           </p>
 
@@ -50,7 +50,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="py-4 md:py-8">
+          <div className="py-4 md:py-6">
             <Countdown targetDate={heroData.countdownTarget} />
           </div>
 
