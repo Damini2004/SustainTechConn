@@ -28,12 +28,12 @@ export function Footer() {
 
       <div className="container relative mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {/* Column 1: Navigation Links */}
+            {/* Column 1: Quick Links */}
             <div className="space-y-4 flex flex-col items-center">
                  <h2 className="font-headline text-2xl font-bold">
                     Quick <span className="text-accent">Links</span>
                 </h2>
-                <nav className="grid grid-cols-2 gap-x-8 gap-y-1.5 mt-2">
+                <nav className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1.5 mt-2">
                     {navLinks.map((link) => (
                         link.isDropdown ? (
                             link.subLinks?.map(subLink => (
