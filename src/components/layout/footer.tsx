@@ -29,7 +29,7 @@ export function Footer() {
       <div className="container relative mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {/* Column 1: Quick Links */}
-            <div className="space-y-4 flex flex-col items-center">
+            <div className="flex flex-col items-center text-center md:items-start md:text-left">
                  <h2 className="font-headline text-2xl font-bold">
                     Quick <span className="text-accent">Links</span>
                 </h2>
@@ -51,11 +51,11 @@ export function Footer() {
             </div>
 
             {/* Column 2: Contact Info */}
-            <div className="space-y-4">
+            <div className="flex flex-col items-center">
                 <h2 className="font-headline text-2xl font-bold text-center">
                     Get in <span className="text-accent">Touch</span>
                 </h2>
-                <div className="space-y-3">
+                <div className="space-y-3 mt-4 w-full">
                 {contactInfo.map((info) => (
                     <Card key={info.title} className="bg-card/20 backdrop-blur-sm text-card-foreground border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow duration-300">
                         <CardHeader className="flex flex-row items-center gap-3 p-3">
@@ -75,11 +75,11 @@ export function Footer() {
             </div>
 
             {/* Column 3: Social Links */}
-            <div className="space-y-4 flex flex-col items-center">
+            <div className="flex flex-col items-center">
                  <h2 className="font-headline text-2xl font-bold">
                     Follow <span className="text-accent">Us</span>
                 </h2>
-                <div className="flex gap-3">
+                <div className="flex gap-3 mt-4">
                 {socialLinks.map((link) => (
                     <Link key={link.name} href={link.href} className="text-white/80 hover:text-white transition-colors p-2 bg-white/10 rounded-md">
                     <Icon name={link.icon} className="h-5 w-5" />
